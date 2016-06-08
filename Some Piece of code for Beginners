@@ -1,0 +1,86 @@
+def third_person_singular():
+    A=input("Enter verb :")
+    s=len(A)
+    if A.endswith('y'or'Y'):
+        k = A.replace("y", "ies")
+        print(k)
+    elif A.endswith('o'or'O'):
+        k = A+'es'
+        print(k)
+    elif A.endswith('ch' or 'CH'):
+        k = A + 'es'
+        print(k)
+    elif A.endswith('S' or 's'):
+        k = A + 'es'
+        print(k)
+    elif A.endswith('sh' or 'SH'):
+        k = A + 'es'
+        print(k)
+    elif A.endswith('x' or 'X'):
+        k = A + 'es'
+        print(k)
+    elif A.endswith('Z' or 'z'):
+        k = A + 'es'
+        print(k)
+    else:
+        k = A + 's'
+        print(k)
+
+
+def histogram():
+    A=input()
+    m=list(A)
+    p rint(m)
+    c=0
+    print("\tHISTOGRAM OF THE LIST\n")
+    for x in range(0,len(m)):
+        for y in  range(0,int(m[x])):
+            print("*",end='')
+        print('\n')
+
+def maps():
+   s=input()
+   l=[]
+   temp_list = []
+   for word in s.split(" "):
+       l.append(word)
+   print(l)
+
+   for word in l:
+       temp_list.append(len(word))
+
+   print("LENGHT OG EACH WORD : ")
+   print(temp_list)
+
+
+
+def sum_multiply():
+    l=[]
+    sum=0
+    mul=1
+    A=(input("Enter Numbers :"))
+    for numbers in (A):
+        l.append(numbers)
+    print(l)
+    for num in range(0,len(l)):
+        sum=sum+int(l[num])
+
+    print("SUM IS :" ,sum)
+    for num in range(0,len(l)):
+        mul=mul*int(l[num])
+    print("MULTIPLICATION IS :",mul)
+def _ismember(L1,L2):
+    for x in range(0,len(L2)):
+        if L2[x] is L1:
+          return True
+        else:
+            return False
+
+def newLine(fileName="palindrome.txt"):
+    file=open(fileName,"r")
+    fil=open("new.txt","w")
+    i=1
+    for c in file:
+        c="{}. {}".format(i,c)
+        fil.write(c)
+        i+=1
